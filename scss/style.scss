@@ -22,6 +22,11 @@ body {
     background-color: white;
 }
 
+.title-h2{
+    padding : 25px 0;
+    margin: 0;
+}
+
 .Logo {
     text-align: center;
     margin:30px 0px;
@@ -74,6 +79,7 @@ body {
         background: var(--button-gradient);
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         cursor: pointer;
+        margin-top: 18px;
     }
 
     &__button:hover{
@@ -81,6 +87,8 @@ body {
         color: #ffffff;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.50);
     }
+
+    
 }
 
 .fonct{
@@ -93,10 +101,10 @@ body {
         gap: 36px;
            
         @media(max-width:1024px){
-            flex-direction: column;
-            padding:0px;
-            align-items: center;
-        }    
+        flex-direction: column;
+        padding:0px;
+        align-items: center;    
+    }
     }
 
     & li{
@@ -127,4 +135,179 @@ body {
         left:-30px;
         }   
     }
+}
+
+// Section Restaurant
+
+.menus{
+    background-color: #F6F6F6;
+    margin-top:50px;
+    padding-bottom:66px;
+    height: 100%;
+    padding-left:25px;
+    padding-right: 25px;
+
+    .menus_cards{
+        grid-template-columns: 1fr;
+        display:grid;
+        gap:18px;
+        
+
+        @media(min-width:1000px){ 
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:18px;
+        width:100%;
+        }
+
+        .card{
+            @include btn-shadow();
+            border-radius: 15px;
+            height: 250px;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            
+            &_img{
+                border-radius: 15px 15px 0 0 ;
+                width: 100%;
+                height: 175px;
+                object-fit: cover;
+                background-size: cover;
+            }
+
+            &_nouveau{
+                position: absolute;
+                height: 24px;
+                width: 80px;
+                background-color: #99E2D0;
+                display: grid;
+                top: 15px;
+                right: 25px;
+                place-items: center;
+                color: #008766;
+                border-radius: 2px;
+            }
+            &_description{
+                position:relative;
+                background-color: white;
+                margin-top:-9px;
+                border-radius:0 0 15px 15px;
+                height: 77px;
+
+                .card_description_titre{
+                    padding-top: 13px;
+                    padding-left: 18px;
+                    margin: 0;
+                }
+                
+                .card_description_lieu{
+                    padding-top: 5px;
+                    padding-left: 18px;
+                    font-weight: 300;
+                    margin: 0;
+                }
+
+                .card_description_hearth{
+                    position:relative;
+                    font-size: 18px;
+                    border-radius: 15px;
+                    padding:15px 13px;
+                }
+            
+        }
+        }
+            }
+} 
+// coeur vide 
+.heart-1{
+    opacity: 1;
+    position: absolute;
+    z-index: 2;   
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    top: 175px;
+    right:12px;
+    
+    &:hover{
+        opacity:0;  
+    }
+}
+
+// coeur plein
+
+.heart-2{
+    position: absolute;
+    top: 175px;
+    right: 12px;
+    opacity: 0;
+    z-index: 2;
+    background:linear-gradient(360deg,#FF79DA,#9356DC);
+    background-clip: text;
+    -webkit-background-clip:text;
+    color:transparent;
+    font-size:25px;
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s linear 0s;
+    
+    &:hover{
+        opacity:1;
+        transition: all 0.3s linear 0s;
+    }
+}
+
+
+// footer 
+
+.foot{
+    background-color: #353535;
+    color: white;
+    @media (min-width:1000px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 114px;
+    }
+
+    &_img{
+        width:137px;
+        height: 27px;
+        filter:invert(100%);
+        margin-left: 25px;
+        margin-top: 22px;
+        margin-bottom:16px;
+        @media (min-width:1000px) {
+        margin: 30px 25px ;
+        }
+    }
+
+    &_ul{
+        list-style-type: none;
+        margin-left: -20px;
+        @media (min-width:1000px) {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row;
+        }
+        
+
+        &_li{
+            display: flex;
+            margin:7px;
+            
+            & i{
+                width: 12px;
+                height: 12px;
+                margin-right: 10px;
+            }
+
+        &_link{
+            text-decoration: none;
+            color: white;
+        }
+        }
+    }
+
 }

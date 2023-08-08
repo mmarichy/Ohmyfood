@@ -292,7 +292,7 @@ body {
 }
 
 .img_menu {
-  width: 375px;
+  width: 100%;
   height: 275px;
   -o-object-fit: cover;
      object-fit: cover;

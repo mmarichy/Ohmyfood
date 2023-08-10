@@ -55,6 +55,11 @@ body {
 .explore__h1 {
   font-size: 24px;
 }
+@media (min-width: 1000px) {
+  .explore__h1 {
+    font-size: 40px;
+  }
+}
 .explore__p {
   font-weight: 300;
   font-size: 18px;
@@ -80,6 +85,12 @@ body {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+.container {
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+}
+
 .fonct {
   padding-left: 25px;
   padding-right: 25px;
@@ -88,8 +99,9 @@ body {
   list-style-type: none;
   display: flex;
   gap: 36px;
+  padding: 0px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .fonct ol {
     flex-direction: column;
     padding: 0px;
@@ -311,11 +323,19 @@ body {
 }
 
 .menu1 {
-  font-family: "shrikhand", sans-serif;
+  font-family: "Shrikhand", sans-serif;
+}
+@media (min-width: 1000px) {
+  .menu1 {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .coeurRestaurant {
-  top: 25%;
+  position: absolute;
+  top: 7px;
+  right: 12px;
 }
 @media (min-width: 1000px) {
   .coeurRestaurant {
@@ -327,10 +347,13 @@ body {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   margin-top: -40px;
+  position: relative;
 }
 @media (min-width: 1000px) {
   .command {
-    margin: -40px 193px 0 193px;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .command_menus {
@@ -338,6 +361,12 @@ body {
   flex-direction: column;
   margin-left: 10px;
   gap: 10px;
+}
+@media (min-width: 1000px) {
+  .command_menus {
+    width: 1000px;
+    margin: auto;
+  }
 }
 .command_entre {
   width: 100%;
@@ -352,6 +381,13 @@ body {
   position: relative;
   font-size: 18px;
 }
+@media (min-width: 1000px) {
+  .command_entre_titre {
+    width: 635px;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+}
 .command_entre_titre::after {
   content: "";
   position: absolute;
@@ -361,6 +397,12 @@ body {
   width: 50px;
   background-color: #99E2D0;
 }
+.command_entre .card_description-heart {
+  position: relative;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 15px 13px;
+}
 
 .plats {
   background-color: #FFFFFF;
@@ -369,6 +411,12 @@ body {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   animation: appear 1s;
+}
+@media (min-width: 1000px) {
+  .plats {
+    width: 635px;
+    margin: auto;
+  }
 }
 
 .command_button {
@@ -388,6 +436,11 @@ body {
   background: var(--button-gradient);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+@media (min-width: 1000px) {
+  .command_button {
+    margin: 40px auto;
+  }
 }
 .command_button:hover {
   opacity: 0.85;

@@ -297,6 +297,13 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 1000px) {
+  .img_menu {
+    height: 385px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 
 .section-menu {
   margin: 24px;
@@ -320,6 +327,11 @@ body {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   margin-top: -40px;
+}
+@media (min-width: 1000px) {
+  .command {
+    margin: -40px 193px 0 193px;
+  }
 }
 .command_menus {
   display: flex;
@@ -489,4 +501,78 @@ body {
   100% {
     transform: scale(1);
   }
+}
+.loader {
+  position: fixed;
+  background-color: white;
+  height: 100%;
+  inset: 0;
+  z-index: 100;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  animation: disappear 200ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+}
+
+.heart {
+  background-color: red;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+  animation: loader infinite 0.3s alternate;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
+}
+.d2 {
+  animation-delay: 0.05s;
+}
+
+.d3 {
+  animation-delay: 0.1s;
+}
+
+.d4 {
+  animation-delay: 0.15s;
+}
+
+.d5 {
+  animation-delay: 0.2s;
 }/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,7 @@
 # Projet 3 OpenClassroom "Ohmyfood"
-```
 
 [Lien du site web](https://mmarichy.github.io/Ohmyfood/)
 
-```
 
 Quatrièmes projet du parcours "Intégrateur web" chez OpenClassroom. L'objectif est de développer puis de dynamiser une page web avec des animations CSS en utilisant le préprocesseur Sass.
 
